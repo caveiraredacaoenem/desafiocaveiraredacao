@@ -3,126 +3,223 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Desafio +900 na Redação ENEM</title>
+  <title>Desafio +900 na Redação ENEM - Cavaleiro da Redação</title>
 
-  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            'roxo': '#8c52ff',
-            'amarelo': '#ffde59',
-            'preto': '#062639',
-            'card': '#0d1a29'
+primary: '#7C4DFF',
+dark: '#0E0E12',
+light: '#F7F7FA',
+graymid: '#A5A5B5',
+graysoft: '#D3D3E0'
           },
           fontFamily: { sans: ['Inter', 'sans-serif'] },
           keyframes: {
-            pulsePurple: {
-              '0%, 100%': { opacity: '1', boxShadow: '0 0 0 0 rgba(140,82,255,0.6)' },
-              '50%': { opacity: '0.85', boxShadow: '0 0 0 15px rgba(140,82,255,0)' }
+            pulseElectric: {
+              '0%,100%': { transform: 'scale(1)', boxShadow: '0 0 0 0 rgba(0,194,255,0.7)' },
+              '50%': { transform: 'scale(1.01)', boxShadow: '0 0 0 10px rgba(0,194,255,0)' }
+            },
+            pulseOrange: {
+              '0%,100%': { opacity: '1', boxShadow: '0 0 0 0 rgba(255,215,0,0.6)' },
+              '50%': { opacity: '0.9', boxShadow: '0 0 0 12px rgba(255,215,0,0)' }
             }
           },
           animation: {
-            'pulse-purple': 'pulsePurple 2.5s infinite'
+            'pulse-electric': 'pulseElectric 2s infinite ease-out',
+            'pulse-orange': 'pulseOrange 2.5s infinite'
           }
         }
       }
     }
   </script>
+
+  <style>
+    body {
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+    .cta-floating-hidden {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+  </style>
 </head>
 
-<body class="font-sans bg-preto text-white">
+<body class="font-sans bg-dark text-white overflow-x-hidden">
 
-<!-- Barra fixa -->
-<div class="fixed top-0 left-0 w-full z-50 bg-roxo py-2 shadow-xl text-center">
-  <p class="text-xs sm:text-sm font-bold tracking-widest">OFERTA ESPECIAL DO DESAFIO +900 — EXPIRA EM <span id="countdown-timer" class="font-mono text-lg">60:00</span></p>
+<!-- BARRA FIXA DO TIMER -->
+<div class="fixed top-0 left-0 w-full z-[100] bg-laranja-quente text-grafite-profundo py-2 shadow-2xl text-center">
+  <p class="text-sm font-extrabold tracking-tight sm:text-lg">
+    ⏱️ DESCONTO EXPIRA EM 
+    <span id="countdown-timer" class="font-mono text-xl sm:text-2xl ml-1 bg-grafite-profundo text-laranja-quente px-2 py-0.5 rounded-md animate-pulse-orange">60:00</span>
+  </p>
 </div>
 
 <!-- HERO -->
-<header class="pt-28 pb-16 border-b border-roxo text-center px-6">
-  <h1 class="text-4xl sm:text-6xl font-extrabold"><span class="text-amarelo">DESAFIO +900</span> NA REDAÇÃO ENEM</h1>
-  <p class="mt-4 text-lg max-w-3xl mx-auto text-gray-200">Participe do desafio que transforma estudantes comuns em candidatos preparados para tirar acima de 900 — mesmo começando do zero.</p>
-  <a href="https://pay.cakto.com.br/a4axup6_668640" class="mt-8 inline-block px-12 py-4 text-lg font-bold text-white bg-roxo rounded-lg hover:scale-105 transition animate-pulse-purple">QUERO PARTICIPAR DO DESAFIO</a>
-</header>
+<section class="w-full px-6 pt-16 pb-24 sm:pt-24 sm:pb-32 max-w-5xl mx-auto">
+<div class="text-center space-y-6">
+<h1 class="text-4xl sm:text-6xl font-extrabold leading-tight">Desafio +900 na Redação ENEM</h1>
+<p class="text-graysoft text-lg sm:text-xl max-w-2xl mx-auto">O único método direto, simples e comprovado que transforma qualquer estudante em alguém capaz de escrever para pontuar alto — mesmo começando do zero.</p>
+<a href="https://pay.cakto.com.br/a4axup6_668640" class="inline-block bg-primary text-white font-semibold px-8 py-4 rounded-xl text-lg hover:bg-primary/80 transition">Quero entrar no Desafio</a>
+</div>
+</section>
 
 <!-- VÍDEO -->
-<section class="mt-12 max-w-4xl mx-auto px-6">
-  <div class="aspect-video">
-    <iframe src="https://www.youtube.com/embed/0P2mGfKk8bw" class="w-full h-full rounded-xl border-4 border-preto shadow-xl"></iframe>
+<section class="mt-12 max-w-3xl mx-auto px-4">
+  <h2 class="text-2xl sm:text-3xl font-bold mb-6 text-center">Assista e Descubra o Segredo</h2>
+
+  <div class="aspect-video w-full rounded-2xl overflow-hidden border-4 border-azul-eletrico shadow-[0_0_40px_-5px_rgba(0,194,255,0.4)]">
+    <iframe class="w-full h-full"
+      src="https://www.youtube.com/embed/0P2mGfKk8bw"
+      allowfullscreen></iframe>
+  </div>
+
+  <div class="text-center mt-6">
+    <a href="https://www.youtube.com/channel/UCoGYYbjYJtaXmnzvhVKOQ2w" target="_blank"
+      class="inline-flex items-center w-full sm:w-auto px-6 py-3 bg-red-600 text-white font-extrabold text-lg rounded-lg shadow-xl hover:bg-red-700 transition hover:scale-105">
+      <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M21.543 6.495c-.233-.822-.843-1.423-1.642-1.657C18.448 4.2 12 4.2 12 4.2s-6.448 0-7.892.638c-.799.234-1.409.835-1.642 1.657C2.457 7.957 2.457 12 2.457 12s0 4.043.638 5.505c.233.822.843 1.423 1.642 1.657C5.552 19.8 12 19.8 12 19.8s6.448 0 7.892-.638c.799-.234 1.409-.835 1.642-1.657C21.543 16.043 21.543 12 21.543 12s0-4.043-.638-5.505zM9.954 15.424V8.576L15.818 12l-5.864 3.424z"/>
+      </svg>
+      VISITAR CANAL DO YOUTUBE
+    </a>
   </div>
 </section>
 
-<!-- PROBLEMAS -->
-<section class="py-20 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
-  <div class="bg-card p-8 rounded-xl border border-roxo shadow-lg">
-    <h2 class="text-2xl font-bold text-roxo mb-4">Se você está cansado de...</h2>
-    <ul class="space-y-3 text-gray-300">
-      <li>✘ Travar na introdução</li>
-      <li>✘ Não saber como começar um parágrafo</li>
-      <li>✘ Se perder na estrutura</li>
-      <li>✘ Não alcançar 900+ mesmo estudando</li>
-      <li>✘ Sentir que "falta algo" na sua redação</li>
-    </ul>
+<!-- PROBLEMAS + SOLUÇÃO -->
+<section class="py-16 px-4 max-w-5xl mx-auto">
+  <div>
+    <h2 class="text-3xl font-extrabold text-laranja-quente text-center mb-10">
+      ❌ Cansado de Estudar Errado?
+    </h2>
+
+    <div class="space-y-4">
+      <div class="bg-azul-escuro-sutil p-4 rounded-xl border border-cinza-borda flex items-start">
+        <span class="text-red-400 text-3xl mr-4">🚫</span>
+        <p class="text-cinza-claro-texto">Travar na Introdução por falta de <span class="font-bold text-white">repertório consistente.</span></p>
+      </div>
+
+      <div class="bg-azul-escuro-sutil p-4 rounded-xl border border-cinza-borda flex items-start">
+        <span class="text-red-400 text-3xl mr-4">🚫</span>
+        <p class="text-cinza-claro-texto">Argumentos <span class="font-bold text-white">fracos e superficiais.</span></p>
+      </div>
+
+      <div class="bg-azul-escuro-sutil p-4 rounded-xl border border-cinza-borda flex items-start">
+        <span class="text-red-400 text-3xl mr-4">🚫</span>
+        <p class="text-cinza-claro-texto">Não passar dos <span class="font-bold text-white">700/800 pontos</span> mesmo estudando.</p>
+      </div>
+
+      <div class="bg-azul-escuro-sutil p-4 rounded-xl border border-cinza-borda flex items-start">
+        <span class="text-red-400 text-3xl mr-4">🚫</span>
+        <p class="text-cinza-claro-texto">Focar em temas que <span class="font-bold text-white">nunca caem no ENEM.</span></p>
+      </div>
+    </div>
   </div>
 
-  <div class="flex items-center">
-    <p class="text-lg text-gray-200 leading-relaxed">O problema não é você. É o método. O Desafio +900 te mostra um caminho curto, direto e comprovado para dominar a escrita <span class="text-amarelo font-bold">em pouquíssimos dias</span>.</p>
+  <div class="mt-12 bg-azul-escuro-sutil p-6 rounded-2xl border-2 border-azul-eletrico shadow-[0_0_40px_-10px_rgba(0,194,255,0.6)]">
+    <h3 class="text-3xl font-extrabold text-center mb-4 text-azul-eletrico">
+      A Solução é Estudar <span class="text-laranja-quente">INTELIGENTEMENTE.</span>
+    </h3>
+    <p class="text-cinza-claro-texto text-lg text-center">
+      O <strong>Desafio +900</strong> elimina tudo que te trava e entrega uma estrutura comprovada para você subir sua nota rapidamente.
+    </p>
   </div>
 </section>
 
-<!-- O QUE INCLUI -->
-<section class="py-20 bg-card border-y border-roxo text-center px-6">
-  <h2 class="text-3xl font-bold mb-10 text-white">O que você vai receber no Desafio</h2>
+<!-- KIT DE APROVAÇÃO -->
+<section class="w-full bg-dark text-white py-20 px-6 max-w-6xl mx-auto">
+<h2 class="text-3xl sm:text-5xl font-bold text-center mb-12">O que você recebe no Desafio</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-sm">
+<h3 class="text-xl font-semibold mb-3">10 FÓRMULAS PRONTAS EXCLUSIVAS</h3>
+<p class="text-graysoft">Impressione o corretor com as fórmulas exclusivas do desafio,  <strong>sem repertório de bolso</strong></p>
+</div>
+<div class="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-sm">
+<h3 class="text-xl font-semibold mb-3">RESUMO DA REDAÇÃO ENEM</h3>
+<p class="text-graysoft">Tudo o que você precisa saber sobre a redação, sem enrolação.</p>
+</div>
+<div class="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-sm">
+<h3 class="text-xl font-semibold mb-3">BANCO DE CITAÇÕES</h3>
+<p class="text-graysoft">Mais de  <strong>50 citações</strong> separadas por eixos sociais para você</p>
+</div>
+<div class="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-sm">
+<h3 class="text-xl font-semibold mb-3">CONECTIVOS</h3>
+<p class="text-graysoft">Lista dos melhores conectivos para usar na REDAÇÃO e como utilizá-los de forma coerente.</p>
+</div>
+<div class="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-sm">
+<h3 class="text-xl font-semibold mb-3">ARGUMENTAÇÕES PRONTAS</h3>
+<p class="text-graysoft">Lista completa de argumentações para usar na redação de forma autoral e produtiva. Impressione o corretor!</p>
+</div>
+<div class="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-sm">
+<h3 class="text-xl font-semibold mb-3">MATERIAL OTIMIZADO PARA IMPRESSÃO A4</h3>
+<p class="text-graysoft">Imprima o material para otimizar sua caminhada aos +900 na redação do ENEM.</p>
+</div>
+</div>
+</section>
 
-  <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
-    <div class="p-6 bg-preto border border-roxo rounded-xl shadow-xl">
-      <h3 class="text-amarelo text-lg font-bold mb-2">✔ Método +900 Simplificado</h3>
-      <p class="text-gray-300">Aprenda o passo a passo que leva seus textos ao nível máximo.</p>
-    </div>
-
-    <div class="p-6 bg-preto border border-roxo rounded-xl shadow-xl">
-      <h3 class="text-amarelo text-lg font-bold mb-2">✔ Treino Diário Guiado</h3>
-      <p class="text-gray-300">Atividades curtas para evoluir de forma acelerada.</p>
-    </div>
-
-    <div class="p-6 bg-preto border border-roxo rounded-xl shadow-xl">
-      <h3 class="text-amarelo text-lg font-bold mb-2">✔ Modelos Nota 900+</h3>
-      <p class="text-gray-300">Estruturas prontas para qualquer tema do ENEM.</p>
-    </div>
-
-    <div class="p-6 bg-preto border border-roxo rounded-xl shadow-xl">
-      <h3 class="text-amarelo text-lg font-bold mb-2">✔ Mapas Mentais Exclusivos</h3>
-      <p class="text-gray-300">Revisão rápida e objetiva.</p>
-    </div>
-
-    <div class="p-6 bg-preto border border-roxo rounded-xl shadow-xl">
-      <h3 class="text-amarelo text-lg font-bold mb-2">✔ Exemplos Comentados</h3>
-      <p class="text-gray-300">Veja na prática o que funciona.</p>
-    </div>
-
-    <div class="p-6 bg-preto border border-roxo rounded-xl shadow-xl">
-      <h3 class="text-amarelo text-lg font-bold mb-2">✔ Comunidade do Desafio</h3>
-      <p class="text-gray-300">Dicas, avisos, suporte e acompanhamento.</p>
-    </div>
-  </div>
+<!-- DEPOIMENTOS -->
+<section class="w-full bg-light text-dark py-20 px-6">
+<h2 class="text-3xl sm:text-5xl font-bold text-center mb-12">Resultados Reais</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+<div class="bg-white shadow-lg p-6 rounded-xl border border-graysoft/40">
+<p class="text-graymid mb-4">“Subi mais de 300 pontos em menos de duas semanas. Nunca tinha entendido redação dessa forma.”</p>
+<span class="font-semibold">— Letícia, 840 pontos</span>
+</div>
+<div class="bg-white shadow-lg p-6 rounded-xl border border-graysoft/40">
+<p class="text-graymid mb-4">“Parei de decorar fórmula e finalmente entendi como escrever sem travar.”</p>
+<span class="font-semibold">— Vinícius, 900+</span>
+</div>
+<div class="bg-white shadow-lg p-6 rounded-xl border border-graysoft/40">
+<p class="text-graymid mb-4">“A forma como você explica é muito simples. Agora eu sei exatamente o que fazer.”</p>
+<span class="font-semibold">— Ana Clara, 880 pontos</span>
+</div>
+</div>
 </section>
 
 <!-- GARANTIA -->
-<section class="py-20 px-6 text-center max-w-4xl mx-auto">
-  <h2 class="text-3xl font-bold text-white mb-6">Garantia Blindada</h2>
-  <p class="text-gray-300 text-lg">Você tem 7 dias para testar o Desafio. Se não sentir evolução real, <span class="text-amarelo font-bold">devolvemos 100% do seu dinheiro</span>.</p>
+<section class="py-16 px-4 text-center max-w-4xl mx-auto border-t border-azul-eletrico/50">
+  <h2 class="text-3xl font-extrabold mb-6 text-white">
+    🔒 Sua Matrícula é <span class="text-azul-eletrico">Sem Riscos</span>
+  </h2>
+  <p class="text-lg text-cinza-claro-texto">
+    Teste por <strong>7 dias</strong>. Se não evoluir, devolvemos <span class="text-laranja-quente font-extrabold">100% do valor</span>.
+  </p>
 </section>
 
 <!-- CTA FINAL -->
-<footer id="cta" class="py-20 bg-preto border-t border-roxo text-center">
-  <h2 class="text-3xl font-bold mb-6">Pronto para entrar no Desafio?</h2>
-  <a href="https://pay.cakto.com.br/a4axup6_668640" class="inline-block px-14 py-5 text-xl font-bold bg-roxo text-white rounded-xl hover:scale-105 transition animate-pulse-purple">QUERO COMEÇAR AGORA</a>
+<footer class="py-16 bg-grafite-profundo text-center border-t border-azul-eletrico">
+  <h2 class="text-3xl font-bold mb-8">Pronto para Seu +900?</h2>
+
+  <a href="https://pay.cakto.com.br/a4axup6_668640"
+     class="inline-block w-full sm:w-auto px-10 py-4 text-xl font-extrabold bg-azul-eletrico text-grafite-profundo rounded-xl hover:scale-105 transition duration-300 animate-pulse-electric shadow-[0_0_40px_-5px_rgba(0,194,255,0.7)]">
+     QUERO ACESSO IMEDIATO
+  </a>
+
   <p class="text-gray-500 mt-8 text-sm">Caveira Redação © 2025 — Todos os direitos reservados.</p>
 </footer>
 
+<!-- CTA FLUTUANTE -->
+<div id="cta-floating"
+     class="fixed bottom-0 left-0 w-full z-50 py-3 px-4 bg-azul-escuro-sutil border-t-4 border-laranja-quente shadow-[0_-5px_20px_rgba(0,0,0,0.5)] transition-all duration-500 cta-floating-hidden">
+
+  <div class="max-w-xl mx-auto flex flex-col sm:flex-row justify-between items-center space-y-2 sm:space-y-0">
+    <p class="text-sm font-bold text-white sm:block">Acesso Completo + Bônus <span class="text-laranja-quente">LIMITADO</span></p>
+
+    <a href="https://pay.cakto.com.br/a4axup6_668640"
+       class="w-full sm:w-auto px-6 py-2 text-lg font-extrabold bg-laranja-quente text-grafite-profundo rounded-lg hover:bg-azul-eletrico hover:text-white transition duration-200">
+       COMPRE AGORA!
+    </a>
+  </div>
+</div>
+
+<!-- SCRIPTS -->
 <script>
+// Timer Regressivo
 let time = 60 * 60;
 const timerElement = document.getElementById("countdown-timer");
 setInterval(() => {
@@ -131,8 +228,19 @@ setInterval(() => {
   timerElement.textContent = `${m}:${s}`;
   if (time > 0) time--;
 }, 1000);
+
+// CTA Flutuante
+const ctaFloating = document.getElementById("cta-floating");
+const heroHeight = document.querySelector("header").offsetHeight;
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > heroHeight) {
+    ctaFloating.classList.remove("cta-floating-hidden");
+  } else {
+    ctaFloating.classList.add("cta-floating-hidden");
+  }
+});
 </script>
 
 </body>
 </html>
-
